@@ -10,15 +10,18 @@ import Container from "@mui/material/Container";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
-function SignIn() {
+function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      username: data.get("username"),
+      fullName: data.get("fullname"),
+      email: data.get("email"),
       password: data.get("password"),
+      confirmPassword: data.get("confirm-password"),
     });
   };
+
   return (
     <>
       <Grid style={{ alignItems: "flex-start" }} container className="image">
@@ -40,7 +43,7 @@ function SignIn() {
             }}
           >
             <Typography component="h1" variant="h5">
-              Sign in
+              Sign Up
             </Typography>
             <Box
               component="form"
@@ -52,11 +55,21 @@ function SignIn() {
                 margin="normal"
                 required
                 fullWidth
-                id="username"
-                label="Username"
-                name="username"
-                autoComplete="username"
+                id="fullname"
+                label="Full Name"
+                name="fullname"
+                autoComplete="fullname"
                 autoFocus
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="email"
+                label="Business Email"
+                type="email"
+                id="email"
+                autoComplete="email"
               />
               <TextField
                 margin="normal"
@@ -66,11 +79,17 @@ function SignIn() {
                 label="Password"
                 type="password"
                 id="password"
-                autoComplete="current-password"
+                autoComplete="password"
               />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="confirm-password"
+                label="Confirm Password"
+                type="password"
+                id="confirm-password"
+                autoComplete="confirm-password"
               />
               <Button
                 type="submit"
@@ -81,14 +100,9 @@ function SignIn() {
                 Sign In
               </Button>
               <Grid container>
-                <Grid item xs>
-                  <Link href="/forgotpassword" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
+                  <Link href="/signin" variant="body2">
+                    {"Already have an account? Sign in"}
                   </Link>
                 </Grid>
               </Grid>
@@ -103,4 +117,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default SignUp;

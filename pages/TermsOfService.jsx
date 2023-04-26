@@ -1,9 +1,8 @@
-import { Text, Button } from "@nextui-org/react";
+import { Text } from "@nextui-org/react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { useMediaQuery } from "react-responsive";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 
 function TermsOfService() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });

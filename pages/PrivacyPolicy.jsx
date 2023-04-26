@@ -1,8 +1,7 @@
-import { Text, Button } from "@nextui-org/react";
+import { Text } from "@nextui-org/react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 
 function PrivacyPolicy() {
   return (

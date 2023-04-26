@@ -1,8 +1,5 @@
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -10,13 +7,12 @@ import Container from "@mui/material/Container";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
-function SignIn() {
+function ForgotPassword() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      username: data.get("username"),
-      password: data.get("password"),
+      email: data.get("email"),
     });
   };
   return (
@@ -40,7 +36,7 @@ function SignIn() {
             }}
           >
             <Typography component="h1" variant="h5">
-              Sign in
+              Forgot Password
             </Typography>
             <Box
               component="form"
@@ -52,46 +48,21 @@ function SignIn() {
                 margin="normal"
                 required
                 fullWidth
-                id="username"
-                label="Username"
-                name="username"
-                autoComplete="username"
+                id="email"
+                label="E-mail Address"
+                name="email"
+                autoComplete="email"
                 autoFocus
               />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              />
+
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
+                Send Link
               </Button>
-              <Grid container>
-                <Grid item xs>
-                  <Link href="/forgotpassword" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
-              </Grid>
             </Box>
           </Box>
         </Container>
@@ -103,4 +74,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default ForgotPassword;

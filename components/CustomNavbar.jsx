@@ -1,4 +1,4 @@
-import { Grid, Image, Button, Navbar, Link } from "@nextui-org/react";
+import { Grid, Button, Link } from "@nextui-org/react";
 
 const CustomNavbar = () => {
   return (
@@ -35,17 +35,19 @@ const CustomNavbar = () => {
         </Link>
       </Grid>
       <Grid xs={12} justify="center">
-        <Button
-          size={"lg"}
-          css={{
-            fontWeight: "$bold",
-            backgroundColor: "#ffd700",
-          }}
-          xs={12}
-          auto
-        >
-          BECOME A MEMBER
-        </Button>
+        <Link to="/signup">
+          <Button
+            size={"lg"}
+            css={{
+              fontWeight: "$bold",
+              backgroundColor: "#ffd700",
+            }}
+            xs={12}
+            auto
+          >
+            BECOME A MEMBER
+          </Button>
+        </Link>
       </Grid>
     </Grid.Container>
   );

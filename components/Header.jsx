@@ -69,17 +69,19 @@ export const Header = () => {
                 Sign in
               </Button>
             </Link>
-            <Button
-              auto
-              css={{
-                backgroundColor: "Black",
-                color: "White",
-                fontWeight: "$extrabold",
-                fontSize: "$xl",
-              }}
-            >
-              BECOME A MEMBER
-            </Button>
+            <Link to="/signup">
+              <Button
+                auto
+                css={{
+                  backgroundColor: "Black",
+                  color: "White",
+                  fontWeight: "$extrabold",
+                  fontSize: "$xl",
+                }}
+              >
+                BECOME A MEMBER
+              </Button>
+            </Link>
           </Grid>
         )}
         {isTabletOrMobile && (

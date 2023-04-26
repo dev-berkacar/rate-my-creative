@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Image, Text, Button } from "@nextui-org/react";
+import { Grid, Image, Text, Button, Link } from "@nextui-org/react";
 import { useMediaQuery } from "react-responsive";
 import { Scale } from "@mui/icons-material";
 
@@ -42,19 +42,21 @@ export const Slogan = () => {
               </Text>
             </Grid>
             <Grid css={{ paddingTop: 40 }} xs={12}>
-              <Button
-                auto
-                rounded
-                css={{
-                  padding: 60,
-                  backgroundColor: "#ffd700",
-                  color: "Black",
-                  fontWeight: "$extrabold",
-                  fontSize: "$xl",
-                }}
-              >
-                <Text size={30}>BECOME A MEMBER</Text>
-              </Button>
+              <Link href="/signup">
+                <Button
+                  auto
+                  rounded
+                  css={{
+                    padding: 60,
+                    backgroundColor: "#ffd700",
+                    color: "Black",
+                    fontWeight: "$extrabold",
+                    fontSize: "$xl",
+                  }}
+                >
+                  <Text size={30}>BECOME A MEMBER</Text>
+                </Button>
+              </Link>
             </Grid>
           </Grid>
           {/* Right Image */}
@@ -111,18 +113,20 @@ export const Slogan = () => {
               </Text>
             </Grid>
             <Grid css={{ paddingTop: 20 }} xs={12}>
-              <Button
-                auto
-                rounded
-                css={{
-                  padding: 40,
-                  backgroundColor: "#ffd700",
-                  color: "Black",
-                  fontWeight: "$extrabold",
-                }}
-              >
-                <Text size={20}>BECOME A MEMBER</Text>
-              </Button>
+              <Link href="/signup">
+                <Button
+                  auto
+                  rounded
+                  css={{
+                    padding: 40,
+                    backgroundColor: "#ffd700",
+                    color: "Black",
+                    fontWeight: "$extrabold",
+                  }}
+                >
+                  <Text size={20}>BECOME A MEMBER</Text>
+                </Button>
+              </Link>
             </Grid>
           </Grid>
           {/* Right Image */}

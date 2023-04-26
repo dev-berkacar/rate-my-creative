@@ -8,6 +8,8 @@ import "./index.css";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import TermsOfService from "../pages/TermsOfService";
 import SignIn from "../pages/SignIn";
+import ForgotPassword from "../pages/ForgotPassword";
+import SignUp from "../pages/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
   {
     path: "/signin",
     element: <SignIn />,
+  },
+  {
+    path: "/forgotpassword",
+    element: <ForgotPassword />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
   },
 ]);
 
